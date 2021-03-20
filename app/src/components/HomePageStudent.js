@@ -2,15 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const HomePageStudent = () => {
-  const [student, setStudent] = useState({
-    id: "",
-    name: "",
-    surname: "",
-    semester: 0,
-    email: "",
-    phone: "",
-  });
-
   useEffect(() => {
     axios({
       method: "GET",
