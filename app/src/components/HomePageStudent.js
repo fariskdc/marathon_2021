@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-const mongoose = require("mongoose");
 
 const HomePageStudent = () => {
   const [student, setStudent] = useState({
@@ -13,11 +12,23 @@ const HomePageStudent = () => {
   });
 
   useEffect(() => {
-    axios.get(
-      "mongodb+srv://hllvc:hllvc@marathon.meoev.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-      (req, res) => {}
-    );
-  });
+    axios({
+      method: "GET",
+      url: "http://localhost:3001/students/2105000181505",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((res) => {
+      setStudent({
+        id: res.data.id,
+        name: res.data.name,
+        surname: res.data.surname,
+        semester: res.data.semester,
+        email: res.data.email,
+        phone: res.data.phone,
+      });
+    });
+  }, []);
 
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
@@ -27,7 +38,6 @@ const HomePageStudent = () => {
     axios
       .get("https://type.fit/api/quotes")
       .then((res) => {
-        console.log(res.data);
         setLoading(false);
         setQuote(res.data[17].text);
         setAuthor(res.data[17].author);
@@ -36,11 +46,11 @@ const HomePageStudent = () => {
         setLoading(true);
         console.log(err);
       });
-  });
+  }, []);
 
   return (
     <div>
-      <h1> Dobro došao ime </h1>
+      <h1> Dobro došao {student.name} </h1>
       {loading ? (
         "Loading...."
       ) : (

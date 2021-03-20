@@ -1,10 +1,13 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
+const cors = require("cors");
+const port = process.env.PORT || 3001;
 const mongoose = require("mongoose");
 require("dotenv/config");
 
 app.use(bodyParser.json());
+app.use(cors());
 
 const postsRoute = require("./routes/students");
 app.use("/students", postsRoute);
@@ -17,4 +20,4 @@ mongoose.connect(
   () => console.log("Connected to DB!")
 );
 
-app.listen(3001);
+app.listen(port);
