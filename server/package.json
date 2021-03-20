@@ -1,0 +1,24 @@
+{
+  "name": "marathon_2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hllvc/marathon_2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hllvc/marathon_2021/issues"
+  },
+  "homepage": "https://github.com/hllvc/marathon_2021#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.1",
+    "nodemon": "^2.0.7"
+  }
+}
