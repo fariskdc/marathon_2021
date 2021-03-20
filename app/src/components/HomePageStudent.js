@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+
 const HomePageStudent = () => {
   const [student, setStudent] = useState({
     id: "",
@@ -10,7 +11,7 @@ const HomePageStudent = () => {
     email: "",
     phone: "",
   });
-
+  
   useEffect(() => {
     axios({
       method: "GET",
@@ -38,6 +39,7 @@ const HomePageStudent = () => {
     axios
       .get("https://type.fit/api/quotes")
       .then((res) => {
+        console.log(res.data);
         setLoading(false);
         setQuote(res.data[17].text);
         setAuthor(res.data[17].author);
@@ -46,7 +48,7 @@ const HomePageStudent = () => {
         setLoading(true);
         console.log(err);
       });
-  }, []);
+  });
 
   return (
     <div>
