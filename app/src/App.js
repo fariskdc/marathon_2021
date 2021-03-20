@@ -1,5 +1,6 @@
 import React from 'react';
 import HomeStudents from './components/HomeStudents';
+import  './App.css';
 
 function App() {
   return (
