@@ -10,6 +10,7 @@ function HomeStudents () {
 
     return (
         
+        
         <Router> <div>
             <NavBar />
             <Switch>
@@ -20,7 +21,7 @@ function HomeStudents () {
             </Switch>
         </div>
         </Router>
-       
+          
 
     )
 }

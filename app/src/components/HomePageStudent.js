@@ -19,16 +19,18 @@ const HomePageStudent = () => {
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((res) => {
-      setStudent({
-        id: res.data.id,
-        name: res.data.name,
-        surname: res.data.surname,
-        semester: res.data.semester,
-        email: res.data.email,
-        phone: res.data.phone,
-      });
-    });
+    })
+      .then((res) => {
+        setStudent({
+          id: res.data.id,
+          name: res.data.name,
+          surname: res.data.surname,
+          semester: res.data.semester,
+          email: res.data.email,
+          phone: res.data.phone,
+        });
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   const [quote, setQuote] = useState("");
