@@ -5,6 +5,7 @@ function WelcomePage(props) {
   const { student } = props;
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
+  const [quoteNum, setQuoteNum] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -12,8 +13,8 @@ function WelcomePage(props) {
       .get("https://type.fit/api/quotes")
       .then((res) => {
         setLoading(false);
-        setQuote(res.data[10].text);
-        setAuthor(res.data[10].author);
+        setQuote(res.data[7].text);
+        setAuthor(res.data[7].author);
       })
       .catch((err) => {
         setLoading(true);
@@ -23,15 +24,17 @@ function WelcomePage(props) {
   }, []);
 
   return (
-    <div>
-      <h1> Dobro došao {student.name} </h1>
+    <div className="welcome-page">
+      <h1>
+        Dobro došao <span>{student.name}</span>{" "}
+      </h1>
       {loading ? (
         "Loading...."
       ) : (
-        <h2>
-          {" "}
-          {quote} by {author}
-        </h2>
+        <div>
+          <h2>{quote}</h2>
+          <p>by {author}</p>
+        </div>
       )}
     </div>
   );

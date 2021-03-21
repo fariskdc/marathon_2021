@@ -2,22 +2,77 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.login-form {
   background-color: #d3d3d3;
-  font-family: "Roboto", sans-serif;
-  color: #171717;
-}
-
-.nav-bar {
-  background-color: tomato;
-  width: 100%;
-  height: 70px;
-}
-
-.nav-bar ul {
+  height: 100vh;
   display: flex;
-  float: left;
+  justify-content: center;
+  align-items: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 65%, 63% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 65%, 63% 100%, 0 100%);
+}
+.login-form form {
+  border-radius: 20px;
+  height: 70vh;
+  width: 500px;
+  padding: 100px;
+  background-color: #161a1d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-form form p {
+  margin-bottom: -20px;
+  font-weight: bold;
+  color: #a4161a;
+}
+.login-form form label {
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  color: #f5f3f4;
+}
+.login-form form input {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.login-form form button {
+  background-color: #f5f3f4;
+  border: none;
+  border-radius: 10px;
+  margin-top: 90px;
+  margin-bottom: 20px;
+  height: 500px;
+  width: 50%;
+  font-weight: bold;
+  font-size: larger;
+}
+.login-form form button:hover {
+  background-color: #e5383b;
+  color: white;
 }
 
-.about {
-  float: right;
+.welcome-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
 }
+.welcome-page h1 {
+  font-size: 72px;
+  font-weight: bold;
+}
+.welcome-page h1 span {
+  color: #a4161a;
+}
+.welcome-page div {
+  display: flex;
+}/*# sourceMappingURL=App.css.map */

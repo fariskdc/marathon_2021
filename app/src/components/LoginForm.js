@@ -37,9 +37,19 @@ function LoginForm(props) {
                 phone: stud.phone,
               });
               break;
-            } else setError({ message: "Wrong Pass", value: true });
+            } else {
+              setError({ message: "Wrong Pass", value: true });
+              setTimeout(() => {
+                setError({ message: "", value: false });
+              }, 3000);
+            }
             break;
-          } else setError({ message: "Doesnt exist", value: true });
+          } else {
+            setError({ message: "Doesnt exist", value: true });
+            setTimeout(() => {
+              setError({ message: "", value: false });
+            }, 3000);
+          }
         }
       })
       .catch((err) => console.log(err));
@@ -63,7 +73,7 @@ function LoginForm(props) {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Log In</button>
-        {error.value ? error.message : null}
+        {error.value ? <p>{error.message}</p> : null}
       </form>
     </div>
   );

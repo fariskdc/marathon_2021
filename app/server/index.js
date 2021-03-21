@@ -9,8 +9,10 @@ require("dotenv/config");
 app.use(bodyParser.json());
 app.use(cors());
 
-const postsRoute = require("./routes/students");
-app.use("/students", postsRoute);
+const subjectsRoute = require("./routes/subject");
+app.use("/subjects", subjectsRoute);
+const studentRoute = require("./routes/students");
+app.use("/students", studentRoute);
 const studentIndexRoute = require("./routes/student_index");
 app.use("/students/:id/index", studentIndexRoute);
 
