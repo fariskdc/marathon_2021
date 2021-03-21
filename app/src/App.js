@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import LoginForm from "./components/LoginForm";
-import HomeStudents from "./components/HomeStudents";
+import HomePageStudents from "./components/HomePageStudent";
 
 function App() {
+  const [isLogged, setIsLogged] = useState(false);
   const [student, setStudent] = useState({
     id: "",
     name: "",
@@ -13,13 +14,18 @@ function App() {
     phone: "",
   });
 
-  const [isLogged, setIsLogged] = useState(false);
-  const handleState = () => {
+  const handleLogin = (payload) => {
+    setStudent(payload);
     setIsLogged(true);
   };
+
   return (
     <div>
-      {isLogged ? <HomeStudents /> : <LoginForm loginAction={handleState} />}
+      {isLogged ? (
+        <HomePageStudents student={student} />
+      ) : (
+        <LoginForm action={handleLogin} />
+      )}
     </div>
   );
 }

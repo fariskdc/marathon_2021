@@ -1,16 +1,16 @@
-import React from 'react';
-import PrintGrades from './PrintGrades';
-import SubjectsList from './SubjectsList';
+import React from "react";
+import PrintGrades from "./PrintGrades";
+import SubjectsList from "./SubjectsList";
 
-const Index = () => {
-    return (
-        <div>
-            <h1>Stranica Indexa</h1>
+const Index = (props) => {
+  return (
+    <div>
+      <h1>Stranica Indexa</h1>
 
-            <SubjectsList /> 
-            <PrintGrades /> 
-        </div>
-    )
-}
+      <SubjectsList />
+      <PrintGrades />
+    </div>
+  );
+};
 
 export default Index;

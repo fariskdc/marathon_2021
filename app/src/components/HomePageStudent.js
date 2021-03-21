@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import LoginForm from "./LoginForm";
+import NavBar from "./NavBar";
 
-const HomePageStudent = () => {
+const HomePageStudent = (props) => {
+  const { student } = props;
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
   const [loading, setLoading] = useState(true);
@@ -19,11 +20,13 @@ const HomePageStudent = () => {
         setLoading(true);
         console.log(err);
       });
+    console.log(props);
   }, []);
 
   return (
     <div>
-      <h1> Dobro došao {} </h1>
+      <NavBar />
+      <h1> Dobro došao {student.name} </h1>
       {loading ? (
         "Loading...."
       ) : (

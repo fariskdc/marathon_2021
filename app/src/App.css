@@ -4,31 +4,17 @@
   box-sizing: border-box;
 }
 
-.navigationBar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10 vh;
-  background-color: #ba181b;
+.nav-bar {
+  background-color: tomato;
+  width: 100%;
+  height: 70px;
 }
 
-.navList {
-  width: 55%;
+.nav-bar ul {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  color: white;
+  float: left;
 }
 
-.login-form {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-form form {
-  display: flex;
-  flex-direction: column;
+.about {
+  float: right;
 }

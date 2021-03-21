@@ -1,7 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import HomeStudents from "./HomeStudents";
-import HomePageStudent from "./HomePageStudent";
 
 function LoginForm(props) {
   const [email, setEmail] = useState("");
@@ -25,12 +23,12 @@ function LoginForm(props) {
         const students = res.data;
         const length = students.length;
         for (let i = 0; i < length; i++) {
-          if (students[i].email == email) {
+          if (students[i].email === email) {
             setError({ message: "", value: false });
-            if (students[i].password == password) {
+            if (students[i].password === password) {
               setError({ message: "", value: false });
               const stud = students[i];
-              setStudent({
+              props.action({
                 id: stud.id,
                 name: stud.name,
                 surname: stud.surname,
@@ -38,11 +36,10 @@ function LoginForm(props) {
                 email: stud.email,
                 phone: stud.phone,
               });
-              props.loginAction();
               break;
             } else setError({ message: "Wrong Pass", value: true });
             break;
-          } else setError({ message: "Not Registered", value: true });
+          } else setError({ message: "Doesnt exist", value: true });
         }
       })
       .catch((err) => console.log(err));
