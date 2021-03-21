@@ -19,6 +19,8 @@ const studentIndexRoute = require("./routes/student_index");
 app.use("/students/:id/index", studentIndexRoute);
 const gradeRoute = require("./routes/grade");
 app.use("/students/:id/index/grades", gradeRoute);
+/* const smsRoute = require("./routes/sms"); */
+/* app.use("/sms", smsRoute); */
 
 mongoose.connect(
   process.env.DB_CONNECTION,

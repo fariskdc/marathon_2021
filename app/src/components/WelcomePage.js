@@ -5,16 +5,17 @@ function WelcomePage(props) {
   const { user } = props;
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
-  const [quoteNum, setQuoteNum] = useState(0);
   const [loading, setLoading] = useState(true);
+
+  const quoteNum = Math.floor(Math.random() * (100 - 0) + 0);
 
   useEffect(() => {
     axios
       .get("https://type.fit/api/quotes")
       .then((res) => {
         setLoading(false);
-        setQuote(res.data[7].text);
-        setAuthor(res.data[7].author);
+        setQuote(res.data[quoteNum].text);
+        setAuthor(res.data[quoteNum].author);
       })
       .catch((err) => {
         setLoading(true);

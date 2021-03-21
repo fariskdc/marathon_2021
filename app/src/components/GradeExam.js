@@ -1,27 +1,21 @@
 import React, { useState } from "react";
-import Nexmo from "nexmo";
 
 function GradeExam(props) {
   const { professor } = props;
 
   const [grade, setGrade] = useState({
     name: "",
+    from: "",
     student: "",
     grade: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const nexmo = new Nexmo({
-      apiKey: "96f1cab9",
-      apiSecret: "K8XIZGrywOAo85xp",
+    setGrade({
+      ...grade,
+      from: `${professor.name} ${professor.surname}`,
     });
-
-    const from = `${professor.name} ${professor.surname}`;
-    const to = "387644020191";
-    const text = `${grade.name}, Ocjena: ${grade.grade}`;
-
-    nexmo.message.sendSms(from, to, text);
   };
 
   return (
@@ -32,14 +26,21 @@ function GradeExam(props) {
           name="name"
           type="text"
           value={grade.name}
-          onChange={(e) => setGrade(e.target.value)}
+          onChange={(e) => setGrade(...grade, (grade.name = e.target.value))}
+        />
+        <label htmlFor="student">Broj indexa studenta</label>
+        <input
+          name="student"
+          type="text"
+          value={grade.student}
+          onChange={(e) => setGrade(...grade, (grade.student = e.target.value))}
         />
         <label htmlFor="grade">Ocjena</label>
         <input
           name="grade"
           type="text"
           value={grade.grade}
-          onChange={(e) => setGrade(e.target.value)}
+          onChange={(e) => setGrade(...grade, (grade.grade = e.target.value))}
         />
         <button type="submit">Ocijeni</button>
       </form>
