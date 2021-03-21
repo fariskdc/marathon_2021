@@ -99,6 +99,9 @@
 }
 
 .index-page {
+  -webkit-clip-path: polygon(27% 0, 100% 0, 100% 69%, 71% 100%, 0 100%, 0% 60%, 0 24%);
+          clip-path: polygon(27% 0, 100% 0, 100% 69%, 71% 100%, 0 100%, 0% 60%, 0 24%);
+  background-color: #a4161a;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -106,7 +109,8 @@
   align-items: center;
 }
 .index-page h1 {
-  font-size: 72px;
+  font-size: 52px;
+  color: #ffffff;
 }
 
 .subject-list {
@@ -116,6 +120,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.subject-list h1 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 .subject-list li {
   padding: 10px;
@@ -130,10 +139,10 @@
   border-radius: 10px;
   width: 200px;
   height: 50px;
-  background-color: #e5383b;
+  background-color: #f5f3f4;
 }
 .print-button:hover {
-  background-color: #a4161a;
+  background-color: #161a1d;
   color: #d3d3d3;
 }
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import GetSubjects from "./GetSubjects";
 import Index from "./Index";
 import Schedule from "./Schedule";
 import WelcomePage from "./WelcomePage";

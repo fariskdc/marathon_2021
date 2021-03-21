@@ -99,13 +99,16 @@
 }
 
 .index-page {
+  clip-path: polygon(27% 0, 100% 0, 100% 69%, 71% 100%, 0 100%, 0% 60%, 0 24%);
+  background-color: #a4161a;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   h1 {
-    font-size: 72px;
+    font-size: 52px;
+    color: #ffffff;
   }
 }
 
@@ -116,6 +119,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
   li {
     padding: 10px;
     font-size: 32px;
@@ -130,9 +138,9 @@
   border-radius: 10px;
   width: 200px;
   height: 50px;
-  background-color: #e5383b;
+  background-color: #f5f3f4;
   &:hover {
-    background-color: #a4161a;
+    background-color: #161a1d;
     color: #d3d3d3;
   }
 }

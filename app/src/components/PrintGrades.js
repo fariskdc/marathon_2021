@@ -1,19 +1,20 @@
 import React from "react";
 import jsPDF from "jspdf";
 
-const PrintGrades = () => {
+const PrintGrades = (props) => {
+  const { student } = props;
   const jsPDFGenerate = () => {
-    const student = {
-      name: "Emsar",
-      surname: "Omic",
-      jmbg: "1709000180087",
-      prosjek: "8.2",
-      number: "387644402963",
-    };
-
     var doc = new jsPDF("p", "pt");
 
-    doc.text(30, 30, student.name);
+    const text = `Informacije o studentu:
+    \n\nIme: ${student.name}
+    \nPrezime: ${student.surname}
+    \nJMBG: ${student.id}
+    \nE-mail: ${student.email}
+    \nBroj telefona: ${student.phone}
+    \nSemestar: ${student.semester}`;
+
+    doc.text(30, 30, text);
 
     doc.save("generated.pdf");
   };
