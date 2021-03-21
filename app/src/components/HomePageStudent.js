@@ -53,8 +53,8 @@ const HomePageStudent = () => {
   });
 
   return (
-    <div>
-      <h1> Dobro došao {student.name} </h1>
+    <div className = 'container'>
+      <h3> Dobro došao {student.name} </h3>
       {loading ? (
         "Loading...."
       ) : (

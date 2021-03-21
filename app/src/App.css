@@ -1,14 +1,20 @@
+
+@import url("https://fonts.googleapis.com/css2?famili=Robot&display=swap");
+
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
+  background-color: #D3D3D3;
+  font-family: 'Roboto', sans-serif;
+  color : #171717;
 }
 
 .navigationBar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 10 vh;
+  min-height: 2% ;
   background-color: #BA181B;
 }
 
@@ -19,4 +25,16 @@
   align-items: center;
   list-style: none;
   color: white;
+  
+}
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-top: 5px;
+
 }

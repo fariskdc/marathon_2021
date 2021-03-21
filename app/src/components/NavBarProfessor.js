@@ -1,22 +1,22 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const NavBar = () =>{
+const NavBarProfessor = () =>{
     
     return (
-        <div className = "nav">
+        <div>
             <nav className = "navigationBar" >
                 <ul className = 'navList'>
-                    <Link to ='/'>
+                    <Link to ='/HomePageProfessor'>
                             <li>Home</li>
                         </Link>
-                    <Link to = '/Index'>
-                            <li>Index</li>
+                    <Link to = '/ScheduleExam'>
+                            <li>Zakazi ispit</li>
                         </Link>
-                    <Link to = '/Schedule'>
-                            <li>Prijava ispita</li>
+                    <Link to = '/ProfessorPredmet'>
+                            <li>Predmet</li>
                         </Link>
-                    <Link to = '/StudentAccount'>
+                    <Link to = '/ProfessorAccount'>
                             <li>Racun</li>
                         </Link>
                 </ul>
@@ -25,4 +25,4 @@ const NavBar = () =>{
     )
 }
 
-export default NavBar;
+export default NavBarProfessor;
