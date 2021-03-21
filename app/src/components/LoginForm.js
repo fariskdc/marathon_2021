@@ -3,17 +3,7 @@ import axios from "axios";
 import HomeStudents from "./HomeStudents";
 import HomePageStudent from "./HomePageStudent";
 
-function LoginForm() {
-  const [isLogged, setIsLogged] = useState(false);
-  const [student, setStudent] = useState({
-    id: "",
-    name: "",
-    surname: "",
-    semester: 0,
-    email: "",
-    phone: "",
-  });
-
+function LoginForm(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -48,7 +38,7 @@ function LoginForm() {
                 email: stud.email,
                 phone: stud.phone,
               });
-              setIsLoggedIn(true);
+              props.loginAction();
               break;
             } else setError({ message: "Wrong Pass", value: true });
             break;

@@ -1,12 +1,25 @@
-import React from "react";
-import HomeStudents from "./components/HomeStudents";
+import React, { useState } from "react";
 import "./App.css";
-import LoginPage from "./components/LoginPage";
+import LoginForm from "./components/LoginForm";
+import HomeStudents from "./components/HomeStudents";
 
 function App() {
+  const [student, setStudent] = useState({
+    id: "",
+    name: "",
+    surname: "",
+    semester: 0,
+    email: "",
+    phone: "",
+  });
+
+  const [isLogged, setIsLogged] = useState(false);
+  const handleState = () => {
+    setIsLogged(true);
+  };
   return (
     <div>
-      <LoginPage />
+      {isLogged ? <HomeStudents /> : <LoginForm loginAction={handleState} />}
     </div>
   );
 }
