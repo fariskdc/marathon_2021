@@ -67,7 +67,7 @@
   margin-left: 20px;
 }
 .welcome-page h1 {
-  font-size: 72px;
+  font-size: 52px;
   font-weight: bold;
 }
 .welcome-page h1 span {
@@ -75,4 +75,35 @@
 }
 .welcome-page div {
   display: flex;
+}
+.welcome-page div h2 {
+  font-size: 92px;
+}
+
+.calendar {
+  background-color: #a4161a;
+  padding-right: 200px;
+  padding-left: 200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calendar h1 {
+  color: #d3d3d3;
+  margin-bottom: 90px;
+  font-weight: bold;
+  font-size: 52px;
+}
+
+.index-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.index-page h1 {
+  font-size: 72px;
 }/*# sourceMappingURL=App.css.map */

@@ -66,7 +66,7 @@
   justify-content: center;
   margin-left: 20px;
   h1 {
-    font-size: 72px;
+    font-size: 52px;
     font-weight: bold;
     span {
       color: #a4161a;
@@ -74,5 +74,36 @@
   }
   div {
     display: flex;
+    h2 {
+      font-size: 92px;
+    }
+  }
+}
+
+.calendar {
+  background-color: #a4161a;
+  padding-right: 200px;
+  padding-left: 200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: #d3d3d3;
+    margin-bottom: 90px;
+    font-weight: bold;
+    font-size: 52px;
+  }
+}
+
+.index-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  h1 {
+    font-size: 72px;
   }
 }

@@ -4,8 +4,8 @@ import SubjectsList from "./SubjectsList";
 
 const Index = (props) => {
   return (
-    <div>
-      <h1>Stranica Indexa</h1>
+    <div className="index-page">
+      <h1>Index</h1>
 
       <SubjectsList />
       <PrintGrades />
