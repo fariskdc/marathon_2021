@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./App.css";
 import LoginForm from "./components/LoginForm";
 import HomePageStudents from "./components/HomePageStudent";
+import "./App.css";
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
