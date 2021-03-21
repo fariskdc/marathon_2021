@@ -5,7 +5,9 @@ const IndexSchema = mongoose.Schema({
     type: String,
     require: true,
   },
-  grades: Array,
+  grades: {
+    type: Array,
+  },
 });
 
 module.exports = mongoose.model("Index", IndexSchema);

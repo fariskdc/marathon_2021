@@ -18,7 +18,11 @@ const PrintGrades = () => {
     doc.save("generated.pdf");
   };
 
-  return <button onClick={jsPDFGenerate}>Printaj Prosjek</button>;
+  return (
+    <button className="print-button" onClick={jsPDFGenerate}>
+      Printaj Prosjek
+    </button>
+  );
 };
 
 export default PrintGrades;

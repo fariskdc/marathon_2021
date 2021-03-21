@@ -30,6 +30,7 @@ function LoginForm(props) {
               const stud = students[i];
               props.action({
                 id: stud.id,
+                status: stud.status,
                 name: stud.name,
                 surname: stud.surname,
                 semester: stud.semester,
@@ -45,10 +46,43 @@ function LoginForm(props) {
             }
             break;
           } else {
-            setError({ message: "Doesnt exist", value: true });
-            setTimeout(() => {
-              setError({ message: "", value: false });
-            }, 3000);
+            axios({
+              method: "GET",
+              url: "http://localhost:3001/professors",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }).then((res) => {
+              const professors = res.data;
+              const lenght = professors.length;
+              for (let i = 0; i < lenght; i++) {
+                if (professors[i].email == email) {
+                  setError({ message: "", value: false });
+                  if (professors[i].password == password) {
+                    setError({ message: "", value: false });
+                    const prof = professors[i];
+                    props.action({
+                      name: prof.name,
+                      surname: prof.surname,
+                      status: prof.status,
+                      email: prof.email,
+                      subjects: prof.subjects,
+                    });
+                    break;
+                  } else {
+                    setError({ message: "Wrong Pass", value: true });
+                    setTimeout(() => {
+                      setError({ message: "", value: false });
+                    }, 300);
+                  }
+                } else {
+                  setError({ message: "Doesnt exist", value: true });
+                  setTimeout(() => {
+                    setError({ message: "", value: false });
+                  }, 3000);
+                }
+              }
+            });
           }
         }
       })

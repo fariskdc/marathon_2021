@@ -22,6 +22,7 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   const student = new Student({
     id: req.body.id,
+    status: req.body.status,
     name: req.body.name,
     surname: req.body.surname,
     semester: req.body.semester,

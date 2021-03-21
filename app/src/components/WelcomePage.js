@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function WelcomePage(props) {
-  const { student } = props;
+  const { user } = props;
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
   const [quoteNum, setQuoteNum] = useState(0);
@@ -26,7 +26,7 @@ function WelcomePage(props) {
   return (
     <div className="welcome-page">
       <h1>
-        Dobro došao <span>{student.name}</span>{" "}
+        Dobro došao <span>{user.name}</span>{" "}
       </h1>
       {loading ? (
         "Loading...."

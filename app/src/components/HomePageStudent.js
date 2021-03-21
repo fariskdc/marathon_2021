@@ -8,7 +8,7 @@ const HomePageStudent = (props) => {
 
   return (
     <div>
-      <WelcomePage student={student} />
+      <WelcomePage user={student} />
       <Schedule />
       <Index student={student} />
     </div>

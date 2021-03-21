@@ -107,3 +107,31 @@
     font-size: 72px;
   }
 }
+
+.subject-list {
+  background-color: #161a1d;
+  height: 50vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  li {
+    padding: 10px;
+    font-size: 32px;
+    color: #d3d3d3;
+  }
+}
+
+.print-button {
+  border: none;
+  color: #161a1d;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  background-color: #e5383b;
+  &:hover {
+    background-color: #a4161a;
+    color: #d3d3d3;
+  }
+}
