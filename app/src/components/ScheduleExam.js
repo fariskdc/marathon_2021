@@ -1,14 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const ScheduleExam = () => {
-
-    return (
-        <div>
-            <h1>
-                Zakazi ispit
-            </h1>
-        </div>
-    )
-}
+  return <div></div>;
+};
 
 export default ScheduleExam;

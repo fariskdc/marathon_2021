@@ -1,15 +1,14 @@
 import React from "react";
 import WelcomePage from "./WelcomePage";
-import Schedule from "./Schedule";
-import Index from "./Index";
+import ScheduleExam from "./ScheduleExam";
+import GradeExam from "./GradeExam";
 
 const HomePageProfessor = (props) => {
   const { professor } = props;
   return (
     <div>
       <WelcomePage user={professor} />
-      <Schedule />
-      <Index professor={professor} />
+      <GradeExam professor={professor} />
     </div>
   );
 };

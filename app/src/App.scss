@@ -66,8 +66,9 @@
   justify-content: center;
   margin-left: 20px;
   h1 {
-    font-size: 52px;
+    font-size: 92px;
     font-weight: bold;
+    margin-bottom: 20px;
     span {
       color: #a4161a;
     }
@@ -75,7 +76,7 @@
   div {
     display: flex;
     h2 {
-      font-size: 92px;
+      font-size: 52px;
     }
   }
 }
@@ -90,7 +91,7 @@
   justify-content: center;
   align-items: center;
   h1 {
-    color: #d3d3d3;
+    color: #ffffff;
     margin-bottom: 90px;
     font-weight: bold;
     font-size: 52px;
@@ -133,5 +134,55 @@
   &:hover {
     background-color: #a4161a;
     color: #d3d3d3;
+  }
+}
+
+.grade-exam {
+  height: 100vh;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  background-color: #a4161a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  form {
+    border-radius: 20px;
+    height: 70vh;
+    width: 500px;
+    padding: 100px;
+    background-color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  label {
+    color: #161a1d;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+  }
+  input {
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  button {
+    background-color: #e5383b;
+    border: none;
+    border-radius: 10px;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    height: 500px;
+    width: 50%;
+    font-weight: bold;
+    font-size: larger;
+    &:hover {
+      // margin-top: 20px;
+      background-color: #660708;
+      color: white;
+    }
   }
 }

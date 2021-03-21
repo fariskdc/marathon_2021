@@ -17,6 +17,8 @@ const studentRoute = require("./routes/students");
 app.use("/students", studentRoute);
 const studentIndexRoute = require("./routes/student_index");
 app.use("/students/:id/index", studentIndexRoute);
+const gradeRoute = require("./routes/grade");
+app.use("/students/:id/index/grades", gradeRoute);
 
 mongoose.connect(
   process.env.DB_CONNECTION,

@@ -11,7 +11,6 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   const index = new Index({
     number: req.body.number,
-    grades: [],
   });
 
   index
