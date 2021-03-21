@@ -13,6 +13,7 @@ const HomePageStudent = (props) => {
       <Schedule />
       <Index student={student} />
       <GetSubjects />
+      
 
     </div>
   );

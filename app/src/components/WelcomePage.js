@@ -26,7 +26,7 @@ function WelcomePage(props) {
   return (
     <div className="welcome-page">
       <h1>
-        Dobro došao <span>{student.name}</span>{" "}
+       Dobro došao <span>{student.name}</span>{" "}
       </h1>
       {loading ? (
         "Loading...."

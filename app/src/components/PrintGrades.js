@@ -23,7 +23,7 @@ const PrintGrades = (props) => {
     doc.save("generated.pdf");
   };
 
-  return <button onClick={jsPDFGenerate}>Printaj Prosjek</button>;
+  return <button onClick={jsPDFGenerate}>Print informacije</button>;
 };
 
 export default PrintGrades;
