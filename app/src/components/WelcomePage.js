@@ -6,13 +6,14 @@ function WelcomePage(props) {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     axios
       .get("https://type.fit/api/quotes")
       .then((res) => {
         setLoading(false);
-        setQuote(res.data[17].text);
-        setAuthor(res.data[17].author);
+        setQuote(res.data[10].text);
+        setAuthor(res.data[10].author);
       })
       .catch((err) => {
         setLoading(true);
